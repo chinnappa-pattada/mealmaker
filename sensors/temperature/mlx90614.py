@@ -61,5 +61,6 @@ class MLX90614():
 
 if __name__ == "__main__":
     sensor = MLX90614()
-    print(sensor.get_amb_temp())
-    print(sensor.get_obj_temp())
+    print '*****'
+    print('ambient temp.: {}'.format(sensor.get_amb_temp()))
+    print('object temp.: {}'.format(sensor.get_obj_temp()))

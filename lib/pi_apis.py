@@ -11,6 +11,7 @@ def gpio_on(gpio_pin):
 
 def gpio_off(gpio_pin):
     "Turn off specified GPIO pin"
+    GPIO.setup(gpio_pin, GPIO.OUT)
     GPIO.output(gpio_pin, False)
 
 def gpio_setup():

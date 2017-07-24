@@ -16,5 +16,6 @@ def ssr_on():
 
 def ssr_off():
     "Turn off the SSR"
+    API.gpio_setup()
     API.gpio_off(SSR_GPIO)
     API.gpio_cleanup()
