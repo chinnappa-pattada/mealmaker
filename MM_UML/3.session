@@ -1,0 +1,31 @@
+window_sizes 1680 1028 393 1281 854 122
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128259 // Class Diagram
+    1281 854 146 A4 0 0
+  deploymentdiagram_ref 134915 // MealMaker deployment
+    1024 683 100 A4 556 0
+  usecasediagram_ref 134787 // User makes hot salty water
+    1024 683 100 A4 0 0
+end
+show_stereotypes
+selected class_ref 148867 // RecipieReader
+open
+  class_ref 128131 // User
+  usecase_ref 128259 // Make Meal
+  class_ref 148867 // RecipieReader
+  class_ref 128259 // Dispenser
+  class_ref 134787 // Ingredient
+  operation_ref 142211 // getTemp
+  class_ref 135043 // HeatingElement
+  class_ref 141571 // Meal
+  class_ref 141699 // Alert
+  class_ref 141827 // ThermalSensor
+  class_ref 141955 // Sensor
+  class_ref 142083 // ImageSensor
+  class_ref 142211 // PressureSensor
+  class_ref 148739 // Stirrer
+  class_ref 148995 // MealMaker
+  deploymentview_ref 128003 // Deployment View 1
+end
+end

@@ -1,0 +1,6 @@
+format 220
+
+artifactcanvas 128003 artifact_ref 128003 // recipie.json
+  xyz 327 927 2000
+end
+end

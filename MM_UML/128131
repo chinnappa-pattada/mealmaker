@@ -1,0 +1,1120 @@
+format 220
+"Package" // Package
+  revision 6
+  modified_by 3 "chinnappa.pattada"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 128131 "Class View 1"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128259 "Class Diagram"
+      classdiagramsettings draw_all_relations no show_members_full_definition yes member_max_width 0 drawing_language python end
+      size A4
+    end
+
+    class 148867 "RecipieReader"
+      visibility protected 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 158211 "ingredients"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Ingredients in the Recipie"
+      end
+
+      attribute 158339 "steps"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Steps to the Recipie"
+      end
+
+      operation 157187 "loadRecipie"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Load Recipie from json"
+      end
+
+      operation 157315 "getIngredients"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Get set of Ingredients"
+      end
+
+      operation 157443 "getSteps"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Get dict of Steps"
+      end
+    end
+
+    class 128259 "Dispenser"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128131 "id"
+	private explicit_type "int"
+	init_value "Default Dispenser"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Default Class for Dispenser"
+      end
+
+      operation 128131 "setItem"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "itemName" explicit_type "string"
+	    defaultvalue "None"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment "Set contents of Dispenser"
+      end
+
+      operation 134659 "getItem"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Get contents of Dispenser"
+      end
+
+      operation 134787 "setWeight"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "itemWeight" explicit_type "int"
+	    defaultvalue "0"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment "Set weight (g) of Item in Dispenser"
+      end
+
+      operation 134915 "getWeight"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Get weight (g) of Item in Dispenser"
+      end
+
+      operation 135043 "displayItem"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Display Item name on Dispenser (LED)"
+      end
+
+      attribute 134787 "item"
+	private explicit_type "string"
+	init_value "None"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Item in Dispenser"
+      end
+
+      attribute 134915 "weight"
+	private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Weight of Item in Dispenser in grams."
+      end
+
+      attribute 150531 "state"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "State of the Dispenser: 0 for not dispensed, 1 for dispensed"
+      end
+
+      operation 150019 "getState"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Return current State of Dispenser"
+      end
+
+      operation 157059 "dispense"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Dispense contents of the Dispenser instance"
+      end
+    end
+
+    class 134787 "Ingredient"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "Food Item"
+      attribute 134659 "name"
+	private explicit_type "string"
+	init_value "Default Item"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 135171 "getState"
+	public explicit_return_type "Enum"
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "get state of Item
+return: Enum state: RAW/COOKING/READY"
+      end
+
+      attribute 135043 "state"
+	private explicit_type "Enum"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "State of the Item
+Enum: RAW, COOKING, READY"
+      end
+
+      operation 135299 "setState"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "itemState" explicit_type "Enum"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment "set state of Item"
+      end
+
+      attribute 142595 "location"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Location of Item
+Should be 3D cartesian (new Class), for location by sensors"
+      end
+
+      operation 141827 "getLocation"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "returns 3d cartesian (new Class) coordinates of Item"
+      end
+
+      operation 141955 "setLocation"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Set location in 3D cartesian coordinates (new Class) for Item"
+      end
+    end
+
+    class 134915 "Pan"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 135171 "id"
+	private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Cooking Pan"
+      end
+
+      attribute 135299 "items"
+	private explicit_type "set"
+	init_value "{}"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Set of Items in the Pan"
+      end
+
+      attribute 135427 "temp"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Temperature of the Pan (in Degrees C)"
+      end
+
+      operation 142083 "addItem"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "item" type class_ref 134787 // Ingredient
+	multiplicity "1"
+	    defaultvalue "None"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment "Add Item into Pan"
+      end
+
+      operation 142211 "getTemp"
+	public explicit_return_type "int"
+	nparams 1
+	  param in name "panId" explicit_type "int"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment "Get temperature in degrees C of Pan with ID 'panID'"
+      end
+
+      operation 142339 "getItems"
+	public explicit_return_type "set"
+	nparams 1
+	  param in name "panID" explicit_type "int"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment "Get Set of Items in Pan with ID 'panId'"
+      end
+    end
+
+    class 135043 "HeatingElement"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 135555 "id"
+	private explicit_type "int"
+	init_value "0"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Heating Element for Pan"
+      end
+
+      attribute 135683 "onState"
+	private explicit_type "bool"
+	init_value "False"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Heating State of the Heating Element
+True for On, False for Off"
+      end
+
+      operation 142723 "turnOn"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "heId" explicit_type "int"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment "Turn Heating Element On"
+      end
+
+      operation 142851 "turnOff"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "hdId" explicit_type "int"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}${)}:
+${docstring}${body}
+"
+	
+	comment "Turn Heating Element Off"
+      end
+    end
+
+    class 141571 "Meal"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 142211 "recipie"
+	private explicit_type "dict"
+	init_value "{}"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "json documenting the Recipie for this Meal"
+      end
+
+      attribute 143747 "state"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "State of Meal. Enum UNSTARTED, INTERMEDIATE, COMPLETE"
+      end
+
+      operation 142979 "getState"
+	public explicit_return_type "Enum"
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Return current state of Meal. Enum: one of UNSTARTED, INTERMEDIATE, COMPLETE"
+      end
+
+      operation 143107 "setRecipie"
+	public explicit_return_type "Recipie"
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Set Recipie for this Meal"
+      end
+    end
+
+    class 141699 "Alert"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 142339 "email"
+	private explicit_type "string"
+	init_value "None"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "User e-mail address for alerting"
+      end
+
+      attribute 142467 "phoneNum"
+	private explicit_type "string"
+	init_value "None"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "User phone number for alerting"
+      end
+
+      operation 142467 "sendEmail"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Send e-mail with current Meal status to all registered e-mail IDs"
+      end
+
+      operation 142595 "sendMsg"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Send message with current Meal status to all registered phone numbers"
+      end
+    end
+
+    class 141827 "ThermalSensor"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128003 // <generalisation>
+	relation 128003 ---|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128003 // <generalisation>
+	  b parent class_ref 141955 // Sensor
+      end
+
+      attribute 143875 "tempReading"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Reading of this Thermal Sensor"
+      end
+
+      operation 143363 "getTemp"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Return tempReading of this Thermal Sensor"
+      end
+    end
+
+    class 141955 "Sensor"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 143107 "location"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Location of the Sensor
+Cartesian, to map with Item/other location"
+      end
+
+      attribute 142723 "id"
+	private explicit_type "int"
+	init_value "None"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "ID of the Sensor"
+      end
+
+      attribute 142851 "type"
+	private explicit_type "string"
+	init_value "None"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Sensor type.
+This should come from a list of configured, supported types."
+      end
+
+      operation 143235 "getLocation"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Return 3d cartesian coordinates (new Class) of the Sensor"
+      end
+    end
+
+    class 142083 "ImageSensor"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128131 // <generalisation>
+	relation 128131 ---|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128131 // <generalisation>
+	  b parent class_ref 141955 // Sensor
+      end
+
+      operation 150147 "capture"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+      end
+    end
+
+    class 142211 "PressureSensor"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128259 // <generalisation>
+	relation 128259 ---|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128259 // <generalisation>
+	  b parent class_ref 141955 // Sensor
+      end
+
+      operation 143491 "getPressure"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Return pressureReading from this Pressure Sensor"
+      end
+
+      attribute 144003 "pressureReading"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Pressure reading from this Pressure Sensor"
+      end
+    end
+
+    class 148739 "Stirrer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 157059 "location"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "location of the Stirrer in 3D cartesian space"
+      end
+
+      operation 156675 "stir1"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Stir with algorithm 1"
+      end
+
+      operation 156803 "stir2"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "stir with algorithm 2"
+      end
+    end
+
+    class 148995 "MealMaker"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      ncouples 1
+      key "" value ""
+      comment "MealMaker Class that controls the Meal Maker and specifies the recipie instructions"
+      attribute 157187 "ingredients"
+	private explicit_type "set"
+	multiplicity "*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Ingredient instances needed for the Meal"
+      end
+
+      attribute 157315 "dispensers"
+	private type class_ref 128259 // Dispenser
+	multiplicity "*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Dispenser instances"
+      end
+
+      attribute 157443 "stirrer"
+	private type class_ref 148739 // Stirrer
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Stirrer instance
+"
+      end
+
+      attribute 157571 "pans"
+	private type class_ref 134915 // Pan
+	multiplicity "*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Pan instances used for Meal"
+      end
+
+      attribute 157699 "healting_elements"
+	private type class_ref 135043 // HeatingElement
+	multiplicity "*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "HeatingElement instances"
+      end
+
+      attribute 157827 "thermal_sensors"
+	private type class_ref 141827 // ThermalSensor
+	multiplicity "*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "ThermalSensor instances"
+      end
+
+      attribute 157955 "image_sensors"
+	private type class_ref 142083 // ImageSensor
+	multiplicity "*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "ImageSensor instances"
+      end
+
+      attribute 158083 "pressure_sensors"
+	private type class_ref 142211 // PressureSensor
+	multiplicity "*"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${stereotype}()
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "PressureSensor instances"
+      end
+
+      operation 156931 "readRecipie"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Load Recipie using RecipieReader, from recipie json file"
+      end
+    end
+  end
+
+  deploymentview 128003 "Deployment View 1"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    deploymentdiagram 134915 "MealMaker deployment"
+      deploymentdiagramsettings
+       end
+      size A4
+    end
+
+    artifact 128003 "recipie.json"
+      associated_artifacts
+      end
+      comment "json specifying: 
+1. ingredients
+2. quantities
+3. pan
+4. recipie as an ordered dict, with steps in sequence.
+   each step is a dict of its own, with a granularity the actiona to be performed on one ingredient."
+    end
+  end
+end

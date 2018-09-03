@@ -1,0 +1,13 @@
+{
+    "ingredients": ["cooked_dal",
+                    "onions",
+                    "agrane"],
+    "quantities": {
+        "cooked_dal": [300, "g"],
+        "onions": [20, "g"],
+        "agrane": [5, "g"]
+    },
+    "instructions": {
+    
+    }
+}

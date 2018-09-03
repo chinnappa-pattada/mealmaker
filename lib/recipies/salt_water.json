@@ -1,0 +1,24 @@
+{
+    "ingredients": {
+        "water": 300,
+        "salt": 2
+    },
+    "pan": 0,
+    "instructions": {
+        "1": {
+            "ingredient": ["water"],
+            "action": "dispense",
+            "wait_till": "-1"
+        },
+        "2": {
+            "ingredient": ["salt"],
+            "action": "dispense",
+            "wait_till": "-1"
+        },
+        "3": {
+            "action": "heat",
+            "temp": 80,
+            "wait_till": "-1"
+        }
+    }
+}
