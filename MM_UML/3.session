@@ -1,15 +1,13 @@
-window_sizes 1680 1028 393 1281 854 122
+window_sizes 1680 1028 393 1281 914 62
 cleanlooks_style
 diagrams
   active  classdiagram_ref 128259 // Class Diagram
-    1281 854 146 A4 0 0
-  deploymentdiagram_ref 134915 // MealMaker deployment
-    1024 683 100 A4 556 0
+    1281 914 146 A4 0 0
   usecasediagram_ref 134787 // User makes hot salty water
     1024 683 100 A4 0 0
 end
 show_stereotypes
-selected class_ref 148867 // RecipieReader
+selected deploymentdiagram_ref 134915 // MealMaker deployment
 open
   class_ref 128131 // User
   usecase_ref 128259 // Make Meal

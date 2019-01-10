@@ -1,6 +1,6 @@
 format 220
 "Package" // Package
-  revision 6
+  revision 8
   modified_by 3 "chinnappa.pattada"
   // class settings
   
@@ -93,19 +93,6 @@ ${docstring}${members}
 	comment "Steps to the Recipie"
       end
 
-      operation 157187 "loadRecipie"
-	public explicit_return_type ""
-	nparams 0
-	
-	
-	
-	python_def "${@}${static}${abstract}def ${name}${(}${)}:
-${docstring}${body}
-"
-	
-	comment "Load Recipie from json"
-      end
-
       operation 157315 "getIngredients"
 	public explicit_return_type ""
 	nparams 0
@@ -130,6 +117,44 @@ ${docstring}${body}
 "
 	
 	comment "Get dict of Steps"
+      end
+
+      attribute 164867 "pan"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Pan "
+      end
+
+      operation 163971 "getPan"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+	comment "Get pan(s) ID"
+      end
+
+      operation 170499 "validateRecipie"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
       end
     end
 
@@ -927,7 +952,7 @@ ${docstring}${members}
 	comment "location of the Stirrer in 3D cartesian space"
       end
 
-      operation 156675 "stir1"
+      operation 156675 "stir_basic"
 	public explicit_return_type ""
 	nparams 0
 	
@@ -951,6 +976,42 @@ ${docstring}${body}
 "
 	
 	comment "stir with algorithm 2"
+      end
+
+      operation 170627 "set_location"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 170755 "get_location"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      operation 170883 "calibrate"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
       end
     end
 

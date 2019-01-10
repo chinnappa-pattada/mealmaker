@@ -54,3 +54,9 @@ class RecipieReader(object):
         :return int self.pan: Pan number
         """
         return self.pan
+
+    def validate_recipie(self):
+        """
+        # TODO: Write function to validate recipie
+        """
+        return 0

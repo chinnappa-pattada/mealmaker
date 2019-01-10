@@ -1,24 +1,25 @@
 {
     "ingredients": {
-        "water": 300,
-        "salt": 2
+        "water":
+            { "dispenser": 0,
+              "weight": 300 },
+        "salt":
+            { "dispenser": 1,
+              "weight": 2 }
     },
     "pan": 0,
     "steps": {
-        "1": {
-            "ingredient": ["water"],
+        "s1": {
+            "ingredient": ["water", "salt"],
             "action": "dispense",
-            "wait_till": "-1"
+            "wait_till":
+                { "w1": { "time": 3 } }
         },
-        "2": {
-            "ingredient": ["salt"],
-            "action": "dispense",
-            "wait_till": "-1"
-        },
-        "3": {
+        "s2": {
             "action": "heat",
-            "temp": 80,
-            "wait_till": "-1"
+            "wait_till":
+                { "w1": { "temp": 100 },
+                  "w2": { "temp": 80 } }
         }
     }
 }
