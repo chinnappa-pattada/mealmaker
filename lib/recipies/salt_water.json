@@ -1,5 +1,5 @@
 {
-    "ingredients": {
+    "ing_prop": {
         "water":
             { "dispenser": 0,
               "weight": 300 },
@@ -8,18 +8,24 @@
               "weight": 2 }
     },
     "pan": 0,
-    "steps": {
-        "s1": {
-            "ingredient": ["water", "salt"],
-            "action": "dispense",
-            "wait_till":
-                { "w1": { "time": 3 } }
-        },
-        "s2": {
-            "action": "heat",
-            "wait_till":
-                { "w1": { "temp": 100 },
-                  "w2": { "temp": 80 } }
-        }
-    }
+    "steps": [
+                {
+                    "step_ing": ["water", "salt"],
+                    "action": "dispense",
+                    "wait_param":  "time",
+                    "wait_value": 3
+                },
+                {
+                    "step_ing": [],
+                    "action": "heat",
+                    "wait_param": "temp",
+                    "wait_value": 100
+                },
+                {
+                    "step_ing": [],
+                    "action": "heat",
+                    "wait_param": "temp",
+                    "wait_value": 80
+                }
+    ]
 }

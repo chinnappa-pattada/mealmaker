@@ -4,7 +4,6 @@ Recipie Interpreter
 import json
 import mealmaker_constants as MMK
 
-
 class RecipieReader(object):
     "Recipie Interpreter Class"
 
@@ -24,20 +23,20 @@ class RecipieReader(object):
             raise IOError('File not found: {}'.format(io_error.filename))
 
         try:
-            self.ingredients = self.recipie[MMK.KEY_INGREDIENTS]
+            self.ing_pop = self.recipie[MMK.KEY_ING_PROP]
             self.steps = self.recipie[MMK.KEY_STEPS]
             self.pan = self.recipie[MMK.KEY_PAN]
         except KeyError as key_err:
             raise KeyError('{} not found in recipie'
                            .format(key_err))
 
-    def get_ingredients(self):
+    def get_ingredient_props(self):
         """
-        Return dict of ingredients of the RecipieReader instance
+        Return dict of properties of ingredients of the RecipieReader instance
 
-        :return dict self.ingredients: dict of ingredients
+        :return dict self.ingredients: dict of properties of ingredients
         """
-        return self.ingredients
+        return self.ing_pop
 
     def get_steps(self):
         """
@@ -58,5 +57,7 @@ class RecipieReader(object):
     def validate_recipie(self):
         """
         # TODO: Write function to validate recipie
+        # Make sure all ingredients in the steps have dispensers defined
+        # in ing_prop
         """
         return 0
