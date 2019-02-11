@@ -21,7 +21,7 @@ import dispenser
 import thermal_sensor
 
 RECIPIE = os.path.join(os.path.dirname(__file__), "recipies/salt_water.json")
-LOG_FILE = os.path.join(os.path.dirname(__file__), "../log/mm.log")
+LOG_FILE = os.path.join(os.path.dirname(__file__), "../mm.log")
 LOG_FORMAT = "%(asctime)s %(filename)s[line:%(lineno)d - %(funcName)20s()] %(levelname)s %(message)s"
 logging.basicConfig(filename=LOG_FILE,
                     level=logging.DEBUG, format=LOG_FORMAT)
